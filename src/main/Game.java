@@ -42,7 +42,7 @@ public class Game extends JPanel implements Runnable {
 	public void addNotify() {
 		super.addNotify();
 		initInput();
-		setCurrentState(new LevelState(1));
+		setCurrentState(new LevelSelectorState());
 		initGame();
 	}
 	

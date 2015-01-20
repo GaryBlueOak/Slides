@@ -27,15 +27,48 @@ public class LevelState extends State {
 	public int _moves;
 
 	public LevelState(int level) {
-		int difficulty = 5;
-		int[] blocks = new int[difficulty*difficulty];
-		blocks[22] = 1;
-		blocks[20] = 1;
-		blocks[4] = 2;
-		blocks[24] = 2;
-		levelGenerate(difficulty, blocks);
 		_victory = false;
 		_moves = 0;
+		levelMake(level);
+	}
+	
+	private void levelMake(int level){
+		int difficulty;
+		int[] blocks;
+		switch(level){
+		case 1:
+			difficulty = 5;
+			blocks = new int[difficulty*difficulty];
+			blocks[22] = 1;
+			blocks[20] = 1;
+			blocks[4] = 2;
+			blocks[24] = 2;
+			levelGenerate(difficulty, blocks);
+			break;
+		case 2:
+			difficulty = 5;
+			blocks = new int[difficulty*difficulty];
+			blocks[7] = 2;
+			blocks[18] = 2;
+			blocks[4] = 3;
+			blocks[19] = 4;
+			blocks[22] = 3;
+			blocks[4] = 4;
+			blocks[16] = 2;
+			blocks[12] = 2;
+					
+			levelGenerate(difficulty, blocks);
+			break;
+		case 3:
+			difficulty = 5;
+			blocks = new int[difficulty*difficulty];
+			blocks[22] = 3;
+			blocks[20] = 3;
+			blocks[4] = 4;
+			blocks[24] = 4;
+			levelGenerate(difficulty, blocks);
+			break;
+		}
 	}
 
 	@Override

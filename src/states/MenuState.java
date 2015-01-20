@@ -15,7 +15,7 @@ import java.io.InputStream;
 
 
 public class MenuState extends State {
-	private int _levelSelect;
+	
 
 	public MenuState(){
 		
@@ -23,23 +23,7 @@ public class MenuState extends State {
 
 	@Override
 	public void onKeyPress(KeyEvent E) {
-		if (E.getKeyCode() == KeyEvent.VK_UP) {
-			if(_levelSelect >1){
-				_levelSelect --;
-			}
-		}
-		if (E.getKeyCode() == KeyEvent.VK_DOWN) {
-			if(_levelSelect <40){
-				_levelSelect++;
-			}
-
-		}
-		if (E.getKeyCode() == KeyEvent.VK_ENTER) {
-			setCurrentState(new LevelState(_levelSelect));
-		}
-//		if (E.getKeyCode() == KeyEvent.VK_RIGHT) {
-//			
-//		}
+		
 	}
 
 	@Override
